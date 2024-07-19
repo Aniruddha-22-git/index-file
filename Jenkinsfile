@@ -1,8 +1,5 @@
 pipeline {
-  agent {
-    label 'built-in'
-    customWorkspace '/mnt/git'
-  }
+  agent any
     stages {
       stage ("stage 1"){
         steps {
