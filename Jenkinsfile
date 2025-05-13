@@ -16,8 +16,8 @@ pipeline {
       }
       stage ("sample-project"){
         steps{
-          sh "sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.105/bin/apache-tomcat-9.0.105.zip -O /mnt"
-          sh "sudo unzip apache-tomcat-9.0.105.zip"
+          sh "sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.105/bin/apache-tomcat-9.0.105.zip -O /mnt/apache-tomcat-9.0.105.zip"
+          sh "sudo unzip /mnt/apache-tomcat-9.0.105.zip"
           sh "sudo chmod -R 777 /mnt/apache-tomcat-9.0.105"
           sh "sudo wget https://tomcat.apache.org/tomcat-6.0-doc/appdev/sample/sample.war -O /mnt/apache-tomcat-9.0.105/webapps/sample.war"
           sh "sudo cd /mnt/apache-tomcat-9.0.105/bin/ && .startup.sh"
