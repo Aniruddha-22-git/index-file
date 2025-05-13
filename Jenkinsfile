@@ -10,7 +10,7 @@ pipeline {
         steps {
           sh "sudo yum install httpd -y"
           sh "sudo systemctl start httpd "
-          sh "sudo echo 'hello world' >> /var/www/html/index.html"
+          sh "echo 'hello world' | sudo tee /var/www/html/index.html"
           sh "sudo chmod -R 777 /var/www/html/index.html"
         }
       }
